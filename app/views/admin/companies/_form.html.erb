@@ -1,0 +1,42 @@
+<%= form_with(model: admin_company, local: true) do |form| %>
+  <% if admin_company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_company.errors.count, "error") %> prohibited this admin_company from being saved:</h2>
+
+      <ul>
+      <% admin_company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intro %>
+    <%= form.text_area :intro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :concept %>
+    <%= form.text_area :concept %>
+  </div>
+
+  <div class="field">
+    <%= form.label :report %>
+    <%= form.text_area :report %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_area :salary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
