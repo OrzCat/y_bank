@@ -1,0 +1,6 @@
+<h1>公司列表</h1>
+<% @companies.each do |company| %> 
+  <a href="<%= company_path(:id => company.id) %>">
+    <span><%= company.name %></span>
+  </a>
+<% end %>

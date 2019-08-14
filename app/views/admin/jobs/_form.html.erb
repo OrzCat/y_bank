@@ -11,10 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :admin_company_id %>
-    <%= form.text_field :admin_company_id %>
-  </div>
+  <% if params[:admin_company_id].present? %>
+    <%= form.hidden_field :admin_company_id, value: params[:admin_company_id] %>
+  <% else %>
+    <div class="field">
+      <%= form.label :admin_company_id %>
+      <%= form.select :admin_company_id, Admin::Company.all.map {|x| [x.name, x.id]} %>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :name %>

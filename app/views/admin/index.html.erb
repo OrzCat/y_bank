@@ -1,0 +1,22 @@
+<div>
+  <h1>管理首頁<h1>
+</div>
+
+<span>公司列表</span>
+<a href="<%= admin_companies_path %>">管理公司資訊</a>
+<p>
+<% @companies.each do |company| %>
+  <a href="<%= admin_company_path(:id => company.id) %>">
+      <span><%= company.name %></span>
+  </a>
+<% end %>
+<p>
+<span>職缺列表</span>
+<a href="<%= admin_jobs_path %>">全部職缺</a>
+<a href="<%= new_admin_job_path %>">新增職缺</a>
+<p>
+<% @jobs.each do |job| %> 
+  <a href="<%= admin_job_path(:id => job.id) %>">
+      <span><%= job.name %></span>
+  </a>
+<% end %>

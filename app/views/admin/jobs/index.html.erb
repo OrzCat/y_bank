@@ -19,7 +19,7 @@
   <tbody>
     <% @admin_jobs.each do |admin_job| %>
       <tr>
-        <td><%= admin_job.admin_company %></td>
+        <td><%= admin_job.company.name %></td>
         <td><%= admin_job.name %></td>
         <td><%= admin_job.enabled %></td>
         <td><%= admin_job.intro %></td>
@@ -37,3 +37,4 @@
 <br>
 
 <%= link_to 'New Admin Job', new_admin_job_path %>
+<%= link_to 'Admin Home', admin_path %>

@@ -1,0 +1,17 @@
+<span>精選公司</span>
+<a href="<%= companies_path %>">更多公司</a>
+<p>
+<% @companies.each do |company| %>
+  <a href="<%= company_path(:id => company.id) %>">
+      <span><%= company.name %></span>
+  </a>
+<% end %>
+<p>
+<span>精選職缺</span>
+<a href="<%= jobs_path %>">更多職缺</a>
+<p>
+<% @jobs.each do |job| %> 
+  <a href="<%= job_path(:id => job.id) %>">
+      <span><%= job.name %></span>
+  </a>
+<% end %>

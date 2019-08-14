@@ -1,0 +1,15 @@
+<h1><%= @company.name %></h1>
+<h2>公司介紹</h2>
+<%= simple_format @company.intro %>
+<h2>公司理念</h2>
+<%= simple_format @company.concept %>
+<h2>媒體報導</h2>
+<%= simple_format @company.report %>
+<h2>薪資福利</h2>
+<%= simple_format @company.salary %>
+<h2>目前職缺</h2>
+<% @jobs.each do |job| %> 
+  <a href="<%= job_path(:id => job.id) %>">
+    <span><%= job.name %></span>
+  </a>
+<% end %>

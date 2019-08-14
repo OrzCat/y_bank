@@ -1,0 +1,6 @@
+<h1>職缺列表</h1>
+<% @jobs.each do |job| %> 
+  <a href="<%= job_path(:id => job.id) %>">
+      <span><%= job.name %></span>
+  </a>
+<% end %>
