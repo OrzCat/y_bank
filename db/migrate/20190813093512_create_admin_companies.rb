@@ -2,6 +2,7 @@ class CreateAdminCompanies < ActiveRecord::Migration[5.2]
   def change
     create_table :admin_companies do |t|
       t.string :name
+      t.boolean :enabled, default: false
       t.text :intro
       t.text :concept
       t.text :report

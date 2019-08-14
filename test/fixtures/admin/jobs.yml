@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_company: one
+  name: MyString
+  enabled: false
+  intro: MyText
+  condition: MyText
+  welfare: MyText
+  salary: MyText
+
+two:
+  admin_company: two
+  name: MyString
+  enabled: false
+  intro: MyText
+  condition: MyText
+  welfare: MyText
+  salary: MyText

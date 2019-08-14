@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Admin company</th>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th>Intro</th>
+      <th>Condition</th>
+      <th>Welfare</th>
+      <th>Salary</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_jobs.each do |admin_job| %>
+      <tr>
+        <td><%= admin_job.admin_company %></td>
+        <td><%= admin_job.name %></td>
+        <td><%= admin_job.enabled %></td>
+        <td><%= admin_job.intro %></td>
+        <td><%= admin_job.condition %></td>
+        <td><%= admin_job.welfare %></td>
+        <td><%= admin_job.salary %></td>
+        <td><%= link_to 'Show', admin_job %></td>
+        <td><%= link_to 'Edit', edit_admin_job_path(admin_job) %></td>
+        <td><%= link_to 'Destroy', admin_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Job', new_admin_job_path %>
